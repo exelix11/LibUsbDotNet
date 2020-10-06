@@ -1,0 +1,1 @@
+Manually copied these from last release on nuget, TODO: figure out a way of automating this, even better if downloading the bins from the original repos.

@@ -41,15 +41,15 @@
 
   <ItemGroup>
     <!-- Build artifacts, these are available during the Azure pipeline build -->
-    <Content Include="$(SYSTEM_ARTIFACTSDIRECTORY)/drop/runtimes/win-x64/native/*.*">
+    <Content Include="../../native/win-x64/*.*">
       <PackagePath>runtimes/win-x64/native/%(Filename)%(Extension)</PackagePath>
       <Pack>true</Pack>
     </Content>
-    <Content Include="$(SYSTEM_ARTIFACTSDIRECTORY)/drop/runtimes/win-x86/native/*.*">
+    <Content Include="../../native/win-x86/*.*">
       <PackagePath>runtimes/win-x86/native/%(Filename)%(Extension)</PackagePath>
       <Pack>true</Pack>
     </Content>
-    <Content Include="$(SYSTEM_ARTIFACTSDIRECTORY)/drop/runtimes/osx-x64/native/*.*">
+    <Content Include="../../native/osx-x64/*.*">
       <PackagePath>runtimes/osx-x64/native/%(Filename)%(Extension)</PackagePath>
       <Pack>true</Pack>
     </Content>
