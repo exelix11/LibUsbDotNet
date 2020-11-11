@@ -21,6 +21,7 @@
     <LangVersion>latest</LangVersion>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>LibUsbDotNet.snk</AssemblyOriginatorKeyFile>
+    <PackageId>SysDVR.LibUsbDotNet</PackageId>
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
@@ -35,21 +36,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Nerdbank.GitVersioning" Version="3.0.50" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
-  </ItemGroup>
-
-  <ItemGroup>
     <!-- Build artifacts, these are available during the Azure pipeline build -->
-    <Content Include="$(SYSTEM_ARTIFACTSDIRECTORY)/drop/runtimes/win-x64/native/*.*">
+    <Content Include="../../drop/runtimes/win-x64/native/*.*">
       <PackagePath>runtimes/win-x64/native/%(Filename)%(Extension)</PackagePath>
       <Pack>true</Pack>
     </Content>
-    <Content Include="$(SYSTEM_ARTIFACTSDIRECTORY)/drop/runtimes/win-x86/native/*.*">
+    <Content Include="../../drop/runtimes/win-x86/native/*.*">
       <PackagePath>runtimes/win-x86/native/%(Filename)%(Extension)</PackagePath>
       <Pack>true</Pack>
     </Content>
-    <Content Include="$(SYSTEM_ARTIFACTSDIRECTORY)/drop/runtimes/osx-x64/native/*.*">
+    <Content Include="../../drop/runtimes/osx-x64/native/*.*">
       <PackagePath>runtimes/osx-x64/native/%(Filename)%(Extension)</PackagePath>
       <Pack>true</Pack>
     </Content>
